@@ -1,0 +1,97 @@
+DATOS GENERALES:
+El presente proyecto busca demostrar conocimientos sobre creación de Api y manejo de datos. Se realiza en base al uso de CRUD, asi como creacion y gestion de una base de datos para el uso de la data.
+
+ Proyecto: CRUD Web Api
+ Autor: Erick Cabrera (erickcabrera.dev@outlook.com)
+ Fecha: Martes 21/01/2025
+
+HERRAMIENTAS:
+        Visual Studio Code (Creación de código)
+        SQL Server         (Creación de la base de datos)
+        GitHub             (Repositorio remoto del proyecto)
+
+TECOLOGIAS Y VERSIONES UTLIZADAS:
+    .NET 8.0
+    Entity Framework 
+        Entity Framework Core Tools         8.0.12
+        Entity Framework Core SQL Server    8.0.12
+
+AVANCE DEL PROYECTO:
+ *  Parte 1: Creación del proyecto                                          21/01/2025 22:28 pm
+
+ *  Parte 2: Modelado y creación de las bases de datos                      22/01/2025 11:07 am
+                Creación de Entidades (Clases)
+                Instalación de paquetes NuGet
+                Creación de Contexto y modelado para la base de datos
+                    Relaciones entre tablas
+                Conexión a la base de datos
+                Generación de migraciones para la base de datos
+
+*   Parte 3: API Básico: Crear Api Controlador - Perfil                     22/01/2025 15:25 pm
+                Creación del controlador
+                Métodos Http Get
+                Creación de DTO para manejo de información precisa
+
+*   Parte 4: API Solicitudes HTTP: Crear Api Controlador - Empleado        22/01/2025 16:16 pm
+                Creación de métodos faltantes
+                Creación de servicios, para evitar demasiada lógica en los controladores
+
+*   Finalización del proyecto                                              22/01/2025 23:35 pm
+
+
+DEFINICIONES:
+    *.NET:
+    es una plataforma de desarrollo de software creada por Microsoft. Te permite construir una variedad de aplicaciones, desde aplicaciones web hasta aplicaciones de escritorio y móviles.
+
+    *Web API:
+    Una Web API (Interfaz de Programación de Aplicaciones Web) es un conjunto de reglas y protocolos que permite a diferentes aplicaciones comunicarse entre sí a través de la web. Aquí tienes una descripción más detallada:
+
+    *Cadena de conexión:
+    Una cadena de conexión es un conjunto de parámetros en formato de texto que especifican cómo una aplicación puede conectarse a una base de datos. Estos parámetros incluyen información como el nombre del servidor, el nombre de la base de datos, las credenciales de autenticación y otras opciones de configuración necesarias para establecer la conexión.
+        Componentes de una Cadena de Conexión:
+            Servidor (Server): El nombre o dirección IP del servidor donde se aloja la base de datos.
+                Ejemplo: Server=localhost o Server=192.168.1.100
+            Base de Datos (Database): El nombre de la base de datos a la que se quiere conectar.
+                Ejemplo: Database=MyWebApiDb
+            Autenticación (User ID y Password): Las credenciales necesarias para autenticar la conexión.
+                 Ejemplo: User ID=miusuario;Password=micontraseña
+            Autenticación Integrada (Trusted_Connection): Utiliza las credenciales del sistema operativo para autenticarse.
+                Ejemplo: Trusted_Connection=True
+            Opciones Adicionales:
+            MultipleActiveResultSets: Permite tener múltiples conjuntos de resultados activos al mismo tiempo.
+                Ejemplo: MultipleActiveResultSets=true
+            TrustServerCertificate: Permite confiar en el certificado del servidor sin validarlo (útil para entornos de desarrollo).
+                Ejemplo: TrustServerCertificate=true
+
+    *Migración:
+    Definición: Una migración es un conjunto de instrucciones que describe cómo transformar el esquema de la base de datos de su estado actual a un nuevo estado. Estas instrucciones se generan a partir de cambios en tus clases de entidad.
+        Objetivo: Facilitar la evolución del esquema de la base de datos sin necesidad de escribir manualmente scripts SQL.
+
+    *Controlador:
+    Un controlador en ASP.NET Core Web API es responsable de manejar las solicitudes HTTP entrantes, procesarlas y devolver respuestas HTTP. Los controladores suelen contener acciones (métodos) que se corresponden con operaciones CRUD (Crear, Leer, Actualizar, Eliminar) y que manejan diferentes tipos de solicitudes HTTP (GET, POST, PUT, DELETE).
+        [HttpGet]: Indica que el método maneja solicitudes HTTP GET.
+        [HttpPost]: Indica que el método maneja solicitudes HTTP POST.
+        [HttpPut("{id}")]: Indica que el método maneja solicitudes HTTP PUT y acepta un parámetro de ruta {id}.
+        [HttpDelete("{id}")]: Indica que el método maneja solicitudes HTTP DELETE y acepta un parámetro de ruta {id}
+
+    *Inyección de Dependencias: 
+    Este patrón se utiliza para proporcionar dependencias (como AppDbContext) a una clase desde el exterior en lugar de que la clase las cree directamente. Esto mejora la modularidad, la facilidad de pruebas y mantiene un código limpio.
+
+    *Programación Asíncrona
+    Se refiere a la ejecución de operaciones en un programa sin bloquear el flujo principal de ejecución. En otras palabras, permite que un programa continúe realizando otras tareas mientras espera que una operación larga o lenta (como una solicitud de red o una operación de E/S) se complete.
+        Beneficios de la Programación Asíncrona
+            Mejor Rendimiento y Capacidad de Respuesta:
+                Eficiencia: Permite que las aplicaciones manejen múltiples tareas al mismo tiempo, mejorando la capacidad de respuesta.
+                No bloqueo: Las operaciones asíncronas no bloquean el hilo principal, permitiendo que el programa continúe ejecutándose.
+        Escalabilidad:
+            Mayor Escalabilidad: Las aplicaciones asíncronas pueden manejar más usuarios y solicitudes simultáneamente, lo que es ideal para aplicaciones web de alto tráfico.
+
+    *Task y ActionResult
+    Task: Es una clase en el espacio de nombres System.Threading.Tasks que representa una operación asincrónica. Se utiliza para realizar operaciones que pueden tardar un tiempo en completarse sin bloquear el hilo principal.
+
+    ActionResult: Es una clase en el espacio de nombres Microsoft.AspNetCore.Mvc que representa el resultado de una acción de un controlador en ASP.NET Core. Permite devolver diferentes tipos de respuestas HTTP desde las acciones del controlador.
+        Tipos de ActionResult:
+            OkResult: Devuelve un estado HTTP 200 OK.
+            BadRequestResult: Devuelve un estado HTTP 400 Bad Request.
+            NotFoundResult: Devuelve un estado HTTP 404 Not Found.
+            CreatedResult: Devuelve un estado HTTP 201 Created, típicamente usado para la creación de nuevos recursos.
