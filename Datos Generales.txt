@@ -21,7 +21,7 @@ AVANCE DEL PROYECTO:
 
  *  Parte 2: Modelado y creación de las bases de datos                      22/01/2025 11:07 am
                 Creación de Entidades (Clases)
-                Instalación de paquetes NuGet
+                Instalación de paquetes NuGet-
                 Creación de Contexto y modelado para la base de datos
                     Relaciones entre tablas
                 Conexión a la base de datos
